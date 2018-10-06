@@ -38,20 +38,6 @@
   <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-  <div>
-    <audio data-sound-id="a" class="accent">
-      <source type="audio/wav" src="javaScript30daysDRUM/clap.wav" />
-      Your browser does not support the <code>audio</code> element.
-    </audio>
-    <audio data-sound-id="s" class="accent">
-      <source type="audio/wav" src="javaScript30daysDRUM/hihat.wav" />
-      Your browser does not support the <code>audio</code> element.
-    </audio>
-    <audio data-sound-id="d" class="accent">
-      <source type="audio/wav" src="javaScript30daysDRUM/kick.wav" />
-      Your browser does not support the <code>audio</code> element.
-    </audio>
-  </div><!-- audio tags -->
   <div class="keys">
     <div data-sound-id="a" class="key">
       <kbd>a</kbd>
@@ -65,7 +51,7 @@
       <kbd>d</kbd>
       <span class="sound">kick</span>
     </div>
-  </div>
+  </div><!-- keys -->
 
   <div class="keyz-loop">
     <div data-sound-id="7" class="key">
@@ -76,10 +62,10 @@
       <kbd>8</kbd>
       <span class="sound">backloop</span>
     </div>
-  </div>
+  </div><!-- keyz loop -->
   <div class="container">
-    <input id="accent-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)">SetVolume</input>
-    <input id="backloop-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+    <input id="accent-control" type="range" min="0" max="100" step="1">SetVolume</input>
+    <input id="backloop-control" type="range" min="0" max="100" step="1">backloop aavolume control</input>
     <h5>
       press <code>[a,s,d] to play one of 3 DRUM sounds</code><br /><br />
       press <code>[7 or 8] to play a BACKING LOOP</code><br /><br /><br />
@@ -88,9 +74,9 @@
       check out my bookmarks & then go link your own collections<br />
       by editing the url source of the audio tags.<br /><br />
       <code>
-          &lt;audio data-sound-id="1"&gt;<br/>
-          &lt;source type="audio/wav" src="https://github...wav?raw=true" /&gt;<br/>
-          &lt;/audio&gt;<br/>
+        &lt;audio data-sound-id="1"&gt;<br/>
+        &lt;source type="audio/wav" src="https://github...wav?raw=true" /&gt;<br/>
+        &lt;/audio&gt;<br/>
       </code><br />
       <a href="https://www.twitch.tv/videos/315409005" rel="link">window.addEventListener("keypress",
         playSound);</a><br />
@@ -109,18 +95,33 @@
       <a href="https://turtlewolfe.com/" rel="link" class="yallow">Copyright 2018, TurtleWolfe.com</a>
     </footer>
   </div><!-- backloops on the right collumn -->
-  <audio data-sound-id="7" class="loop" loop>
-    <source type="audio/wav" src="https://github.com/TurtleWolf/pianoMACHINE/blob/master/freeSound/435147__kickhat__ambient-drone-21-07-2018.wav?raw=true" />
-    Your browser does not support the <code>audio</code> element.
-  </audio>
-  <audio data-sound-id="8" class="loop" loop>
-    <source type="audio/wav" src="https://github.com/TurtleWolf/pianoMACHINE/blob/master/freeSound/440957__l-q__coin-3.wav?raw=true" />
-    Your browser does not support the <code>audio</code> element.
-  </audio>
-  <audio data-sound-id="9" class="loop" loop>
-    <source type="audio/wav" src="https://github.com/TurtleWolf/pianoMACHINE/blob/master/freeSound/441375__malinby__organ.wav?raw=true" />
-    Your browser does not support the <code>audio</code> element.
-  </audio>
+  <div>
+    <!-- audio tags -->
+    <audio data-sound-id="a" class="accent">
+      <source type="audio/wav" src="javaScript30daysDRUM/clap.wav" />
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+    <audio data-sound-id="s" class="accent">
+      <source type="audio/wav" src="javaScript30daysDRUM/hihat.wav" />
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+    <audio data-sound-id="d" class="accent">
+      <source type="audio/wav" src="javaScript30daysDRUM/kick.wav" />
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+    <audio data-sound-id="7" class="loop" loop>
+      <source type="audio/wav" src="https://github.com/TurtleWolf/pianoMACHINE/blob/master/freeSound/435147__kickhat__ambient-drone-21-07-2018.wav?raw=true" />
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+    <audio data-sound-id="8" class="loop" loop>
+      <source type="audio/wav" src="https://github.com/TurtleWolf/pianoMACHINE/blob/master/freeSound/440957__l-q__coin-3.wav?raw=true" />
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+    <audio data-sound-id="9" class="loop" loop>
+      <source type="audio/wav" src="https://github.com/TurtleWolf/pianoMACHINE/blob/master/freeSound/441375__malinby__organ.wav?raw=true" />
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+  </div><!-- audio tags -->
   <script src="app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
