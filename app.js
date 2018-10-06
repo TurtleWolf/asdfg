@@ -1,25 +1,28 @@
 window.addEventListener("keypress", playSound);
 const keys = Array.from(document.querySelectorAll(".key"));
 keys.forEach(key => key.addEventListener("transitionend", removeTransition));
-const players = document.querySelectorAll("audio");
-var x = document.getElementsByClassName("accent");
-const volumeControl = document.getElementById("accent-control");
-// const loopVolume = document.getElementById("backloop-control");
-let globalVolume = 1;
-
 function removeTransition(e) {
   if (e.propertyName !== "transform") return;
   e.target.classList.remove("playing");
 }
+let volume = 1;
+const accents = document.querySelectorAll(".accent");
+const accentControl = document.getElementById("accent-control");
+const loops = document.querySelectorAll(".loop");
+const loopVolume = document.getElementById("backloop-control");
 
-volumeControl.addEventListener("change", function() {
-  globalVolume = volumeControl.value / 100;
-
-  players.forEach(function(player) {
-    player.volume = globalVolume;
+accentControl.addEventListener("change", function() {
+  volume = accentControl.value / 100;
+  accents.forEach(function(player) {
+    player.volume = volume;
   });
 });
-
+loopVolume.addEventListener("change", function() {
+  volume = loopVolume.value / 100;
+  loops.forEach(function(player) {
+    player.volume = volume;
+  });
+});
 function playSound(e) {
   //   const note = document.querySelector(`[data-sound-id="${keyName}"]`).play();
   const keyName = event.key;
@@ -31,5 +34,5 @@ function playSound(e) {
   audio.currentTime = 0;
   audio.play();
 }
-console.log(players);
-console.log(x);
+// console.log(players);
+// console.log(x);
