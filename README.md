@@ -12,7 +12,7 @@ Remember when we were all skinning our own music players?
 ### ..journey to now
 
 1. [.addEventListener.play(${`audio-id`})](https://www.twitch.tv/videos/315409005 "twitch list")
-1. [global volume slider](https://www.google.com "Google's Homepage")
+1. [2nd volume slider](https://www.twitch.tv/videos/319189252 "const accents = document.querySelectorAll('.accent');")
 1. [drop down selector for looping backbeat](https://www.google.com "Google's Homepage")
 
 ![Udemy Development Coach @ Traversy Media](https://github.com/TurtleWolf/pianoMACHINE/blob/master/Capture.PNG "pianoMACHINE")
